@@ -1,0 +1,31 @@
+This is ItemsForSale, v0.1
+
+This program generates random items for sale, using the tables from the Core Rulebook and Ultimate Equipment.
+
+ant build to build an ItemsForSale.jar
+
+java -jar ItemsForSale.jar <number of items> <item degree> <economy modifier>
+
+number of items, should be expressed in 'dice', like '3d4' or '1d6'. You can also modify this value, like '3d4+2', etc.
+
+item degree is minor/medium/major
+
+economy modifier...so, Ultimate Equipment introduced the idea of a 'qualifier', which is least/lesser/greater. least only applies to minor
+slotless wondrous items, anyway! A given town stat block only names the item degree, not the qualifier. I decided to make the choice of 
+qualifier for a given item random (50/50 lesser/greater)...modified by the 'economy' stat of a given town. That is, the better the 
+economy of a given town, the better chance of seeing nicer items for sale! This input is optional
+
+TODO: make a bunch of 'presets' of towns whose default stat blocks are known, like 'Sandpoint'.
+
+Anyway, there's a pile more to do, the big things being
+
+a) total code redesign, because the code is pretty bad at this point
+b) get more errata! There is some errata in here already
+
+1. pricing for the amulet of mighty fists is fixed
+2. the random weapon table is correctly patched
+
+and c) fix how weapon and armor special abilities are assigned, to avoid illegal combinations (like an anchoring repositiong 
+weapon, for instance
+
+
