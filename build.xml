@@ -2,9 +2,9 @@
 	<property name="src" 	location="src" />
 	<property name="build" 	location="build" />
 	<property name="dist" 	location="dist" />
+	<property name="version" value="0.1" />
 	
-	<target name="init">
-		<tstamp />
+	<target name="init">		
 		<mkdir dir="${build}" />
 		<delete file="${dist}/*.jar" />
 	</target>
@@ -15,7 +15,7 @@
 	
 	<target name="dist" depends="compile">
 		<jar 
-			jarfile="${dist}/ItemsForSale-${DSTAMP}.jar" 
+			jarfile="${dist}/ItemsForSale-${version}.jar" 
 			basedir="${build}" 
 			manifest="META-INF/MANIFEST.MF" /> 
 	</target>
